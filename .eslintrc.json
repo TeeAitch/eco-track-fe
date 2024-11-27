@@ -1,0 +1,55 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/all",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "rules": {
+    "eqeqeq": "error", // require the use of === and !==
+    "no-console": "error", // disallow the use of console
+    "no-shadow": "error", // disallow variable declarations from shadowing variables declared in the outer scope
+    "no-var": "error", // Disallows use of var keyword, encourages use of let and const
+    "no-shadow-restricted-names": "error", // disallow identifiers from shadowing restricted names
+    "no-unused-expressions": "error", // disallow unused expressions
+    "no-unused-vars": "error", // disallow unused variables
+    "prefer-const": "error", // Enforces use of const instead of let when variable value doesn't change
+    "@typescript-eslint/no-unused-vars": "error", // disallow unused variables
+    "no-useless-return": "warn", // Throws a warning for useless return statements
+    "camelcase": "warn", // Throws a warning for non-camelcase variables
+    "react/jsx-max-depth": ["warn", { "max": 6 }], // This option validates a specific depth for JSX.
+    "@typescript-eslint/ban-ts-comment": "warn", // Disallow @ts-<..> comments or require descriptions after directives.
+    "@typescript-eslint/no-empty-function": "off", // Disallow empty functions
+    "no-empty-function": "off", // Disallow empty functions
+    "no-warning-comments": "off", // Warns about certain types of comments (e.g., TODO, FIXME)
+    "jsx-sort-props": "off", // Enforces props alphabetical sorting
+    "react/forbid-component-props": "off", // forbid certain props on components
+    "react/style-prop-object": "off", // Enforces style prop value is an object
+    "react/jsx-props-no-spreading": "off", // Enforces that there is no spreading for any JSX attribute.
+    "react/jsx-filename-extension": "off", // restrict file extensions that may contain JSX
+    "react/jsx-no-literals": "off", // disallow literal strings as the value of prop attributes
+    "react/prefer-read-only-props": "off", // Enforces that props are read-only
+    "react/prop-types": "off", // prevent missing props validation in a React component definition
+    "react/jsx-sort-props": "off", // Enforces props alphabetical sorting
+    "react/require-default-props": "off", // enforces a default value for props
+    "react/jsx-no-bind": ["error", { "allowArrowFunctions": true }], // disallow function binding in JSX props
+    "react/function-component-definition": [
+      "warn",
+      { "namedComponents": "arrow-function" }
+    ] // enforce a specific function component definition
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
